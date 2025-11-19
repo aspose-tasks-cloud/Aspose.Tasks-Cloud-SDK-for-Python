@@ -34,6 +34,10 @@ Name | Type | Description | Notes
 **budgeted_nonlabor_cost** | **float** | Gets the value of budgeted (or planned) non labor cost. | 
 **budgeted_material_cost** | **float** | Gets the value of of budgeted (or planned) material cost. | 
 **budgeted_expense_cost** | **float** | Gets the value of budgeted (or planned) expense cost. | 
+**primary_constraint_type** | [**PrimaveraConstraintType**](PrimaveraConstraintType.md) | Gets a type of primary constraint. | 
+**primary_constraint_date** | **datetime** | Gets the date of primary constraint. | 
+**secondary_constraint_type** | [**PrimaveraConstraintType**](PrimaveraConstraintType.md) | Gets a type of secondary constraint. | 
+**secondary_constraint_date** | **datetime** | Gets the date of secondary constraint. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

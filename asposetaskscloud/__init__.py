@@ -64,6 +64,7 @@ from asposetaskscloud.models.outline_value_type import OutlineValueType
 from asposetaskscloud.models.page_size import PageSize
 from asposetaskscloud.models.presentation_format import PresentationFormat
 from asposetaskscloud.models.primavera_activity_type import PrimaveraActivityType
+from asposetaskscloud.models.primavera_constraint_type import PrimaveraConstraintType
 from asposetaskscloud.models.primavera_duration_type import PrimaveraDurationType
 from asposetaskscloud.models.primavera_percent_complete_type import PrimaveraPercentCompleteType
 from asposetaskscloud.models.primavera_task_properties import PrimaveraTaskProperties

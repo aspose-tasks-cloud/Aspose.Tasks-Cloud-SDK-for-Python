@@ -71,7 +71,11 @@ class PrimaveraTaskProperties(object):
         'budgeted_labor_cost': 'float',
         'budgeted_nonlabor_cost': 'float',
         'budgeted_material_cost': 'float',
-        'budgeted_expense_cost': 'float'
+        'budgeted_expense_cost': 'float',
+        'primary_constraint_type': 'PrimaveraConstraintType',
+        'primary_constraint_date': 'datetime',
+        'secondary_constraint_type': 'PrimaveraConstraintType',
+        'secondary_constraint_date': 'datetime'
     }
 
     attribute_map = {
@@ -105,10 +109,14 @@ class PrimaveraTaskProperties(object):
         'budgeted_labor_cost': 'budgetedLaborCost',
         'budgeted_nonlabor_cost': 'budgetedNonlaborCost',
         'budgeted_material_cost': 'budgetedMaterialCost',
-        'budgeted_expense_cost': 'budgetedExpenseCost'
+        'budgeted_expense_cost': 'budgetedExpenseCost',
+        'primary_constraint_type': 'primaryConstraintType',
+        'primary_constraint_date': 'primaryConstraintDate',
+        'secondary_constraint_type': 'secondaryConstraintType',
+        'secondary_constraint_date': 'secondaryConstraintDate'
     }
 
-    def __init__(self, sequence_number=None, activity_id=None, remaining_early_finish=None, remaining_early_start=None, remaining_late_start=None, remaining_late_finish=None, raw_duration_type=None, raw_activity_type=None, raw_complete_percent_type=None, raw_status=None, duration_percent_complete=None, physical_percent_complete=None, actual_non_labor_units=None, actual_labor_units=None, units_percent_complete=None, remaining_labor_units=None, remaining_non_labor_units=None, duration_type=None, activity_type=None, percent_complete_type=None, actual_labor_cost=None, actual_nonlabor_cost=None, actual_material_cost=None, actual_expense_cost=None, remaining_expense_cost=None, actual_total_cost=None, budgeted_total_cost=None, budgeted_labor_cost=None, budgeted_nonlabor_cost=None, budgeted_material_cost=None, budgeted_expense_cost=None):  # noqa: E501
+    def __init__(self, sequence_number=None, activity_id=None, remaining_early_finish=None, remaining_early_start=None, remaining_late_start=None, remaining_late_finish=None, raw_duration_type=None, raw_activity_type=None, raw_complete_percent_type=None, raw_status=None, duration_percent_complete=None, physical_percent_complete=None, actual_non_labor_units=None, actual_labor_units=None, units_percent_complete=None, remaining_labor_units=None, remaining_non_labor_units=None, duration_type=None, activity_type=None, percent_complete_type=None, actual_labor_cost=None, actual_nonlabor_cost=None, actual_material_cost=None, actual_expense_cost=None, remaining_expense_cost=None, actual_total_cost=None, budgeted_total_cost=None, budgeted_labor_cost=None, budgeted_nonlabor_cost=None, budgeted_material_cost=None, budgeted_expense_cost=None, primary_constraint_type=None, primary_constraint_date=None, secondary_constraint_type=None, secondary_constraint_date=None):  # noqa: E501
         """PrimaveraTaskProperties - a model defined in Swagger"""  # noqa: E501
 
         self._sequence_number = None
@@ -142,6 +150,10 @@ class PrimaveraTaskProperties(object):
         self._budgeted_nonlabor_cost = None
         self._budgeted_material_cost = None
         self._budgeted_expense_cost = None
+        self._primary_constraint_type = None
+        self._primary_constraint_date = None
+        self._secondary_constraint_type = None
+        self._secondary_constraint_date = None
         self.discriminator = None
 
         if sequence_number is not None:
@@ -206,6 +218,14 @@ class PrimaveraTaskProperties(object):
             self.budgeted_material_cost = budgeted_material_cost
         if budgeted_expense_cost is not None:
             self.budgeted_expense_cost = budgeted_expense_cost
+        if primary_constraint_type is not None:
+            self.primary_constraint_type = primary_constraint_type
+        if primary_constraint_date is not None:
+            self.primary_constraint_date = primary_constraint_date
+        if secondary_constraint_type is not None:
+            self.secondary_constraint_type = secondary_constraint_type
+        if secondary_constraint_date is not None:
+            self.secondary_constraint_date = secondary_constraint_date
 
     @property
     def sequence_number(self):
@@ -910,6 +930,98 @@ class PrimaveraTaskProperties(object):
         if budgeted_expense_cost is None:
             raise ValueError("Invalid value for `budgeted_expense_cost`, must not be `None`")  # noqa: E501
         self._budgeted_expense_cost = budgeted_expense_cost
+    @property
+    def primary_constraint_type(self):
+        """Gets the primary_constraint_type of this PrimaveraTaskProperties.  # noqa: E501
+
+        Gets a type of primary constraint.  # noqa: E501
+
+        :return: The primary_constraint_type of this PrimaveraTaskProperties.  # noqa: E501
+        :rtype: PrimaveraConstraintType
+        """
+        return self._primary_constraint_type
+
+    @primary_constraint_type.setter
+    def primary_constraint_type(self, primary_constraint_type):
+        """Sets the primary_constraint_type of this PrimaveraTaskProperties.
+
+        Gets a type of primary constraint.  # noqa: E501
+
+        :param primary_constraint_type: The primary_constraint_type of this PrimaveraTaskProperties.  # noqa: E501
+        :type: PrimaveraConstraintType
+        """
+        if primary_constraint_type is None:
+            raise ValueError("Invalid value for `primary_constraint_type`, must not be `None`")  # noqa: E501
+        self._primary_constraint_type = primary_constraint_type
+    @property
+    def primary_constraint_date(self):
+        """Gets the primary_constraint_date of this PrimaveraTaskProperties.  # noqa: E501
+
+        Gets the date of primary constraint.  # noqa: E501
+
+        :return: The primary_constraint_date of this PrimaveraTaskProperties.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._primary_constraint_date
+
+    @primary_constraint_date.setter
+    def primary_constraint_date(self, primary_constraint_date):
+        """Sets the primary_constraint_date of this PrimaveraTaskProperties.
+
+        Gets the date of primary constraint.  # noqa: E501
+
+        :param primary_constraint_date: The primary_constraint_date of this PrimaveraTaskProperties.  # noqa: E501
+        :type: datetime
+        """
+        if primary_constraint_date is None:
+            raise ValueError("Invalid value for `primary_constraint_date`, must not be `None`")  # noqa: E501
+        self._primary_constraint_date = primary_constraint_date
+    @property
+    def secondary_constraint_type(self):
+        """Gets the secondary_constraint_type of this PrimaveraTaskProperties.  # noqa: E501
+
+        Gets a type of secondary constraint.  # noqa: E501
+
+        :return: The secondary_constraint_type of this PrimaveraTaskProperties.  # noqa: E501
+        :rtype: PrimaveraConstraintType
+        """
+        return self._secondary_constraint_type
+
+    @secondary_constraint_type.setter
+    def secondary_constraint_type(self, secondary_constraint_type):
+        """Sets the secondary_constraint_type of this PrimaveraTaskProperties.
+
+        Gets a type of secondary constraint.  # noqa: E501
+
+        :param secondary_constraint_type: The secondary_constraint_type of this PrimaveraTaskProperties.  # noqa: E501
+        :type: PrimaveraConstraintType
+        """
+        if secondary_constraint_type is None:
+            raise ValueError("Invalid value for `secondary_constraint_type`, must not be `None`")  # noqa: E501
+        self._secondary_constraint_type = secondary_constraint_type
+    @property
+    def secondary_constraint_date(self):
+        """Gets the secondary_constraint_date of this PrimaveraTaskProperties.  # noqa: E501
+
+        Gets the date of secondary constraint.  # noqa: E501
+
+        :return: The secondary_constraint_date of this PrimaveraTaskProperties.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._secondary_constraint_date
+
+    @secondary_constraint_date.setter
+    def secondary_constraint_date(self, secondary_constraint_date):
+        """Sets the secondary_constraint_date of this PrimaveraTaskProperties.
+
+        Gets the date of secondary constraint.  # noqa: E501
+
+        :param secondary_constraint_date: The secondary_constraint_date of this PrimaveraTaskProperties.  # noqa: E501
+        :type: datetime
+        """
+        if secondary_constraint_date is None:
+            raise ValueError("Invalid value for `secondary_constraint_date`, must not be `None`")  # noqa: E501
+        self._secondary_constraint_date = secondary_constraint_date
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
