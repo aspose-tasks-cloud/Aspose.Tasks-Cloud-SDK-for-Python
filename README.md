@@ -34,6 +34,9 @@ Feel free to explore the [Developer's Guide](https://docs.aspose.cloud/display/t
 XER, XLSX, HTML, XML, TXT, TIF, SVG, PNG, JPEG
 
 
+## Enhancements in Version 26.6
+- Added new property to TaskItem.
+
 ## Enhancements in Version 25.11
 - Enhanced reading data from Primavera-specific task's properties.
 

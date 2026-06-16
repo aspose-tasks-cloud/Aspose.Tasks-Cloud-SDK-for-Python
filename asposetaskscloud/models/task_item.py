@@ -47,7 +47,8 @@ class TaskItem(object):
         'name': 'str',
         'start': 'datetime',
         'finish': 'datetime',
-        'duration': 'str'
+        'duration': 'str',
+        'activity_id': 'str'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class TaskItem(object):
         'name': 'name',
         'start': 'start',
         'finish': 'finish',
-        'duration': 'duration'
+        'duration': 'duration',
+        'activity_id': 'activityId'
     }
 
-    def __init__(self, link=None, uid=None, id=None, name=None, start=None, finish=None, duration=None):  # noqa: E501
+    def __init__(self, link=None, uid=None, id=None, name=None, start=None, finish=None, duration=None, activity_id=None):  # noqa: E501
         """TaskItem - a model defined in Swagger"""  # noqa: E501
 
         self._link = None
@@ -70,6 +72,7 @@ class TaskItem(object):
         self._start = None
         self._finish = None
         self._duration = None
+        self._activity_id = None
         self.discriminator = None
 
         if link is not None:
@@ -86,6 +89,8 @@ class TaskItem(object):
             self.finish = finish
         if duration is not None:
             self.duration = duration
+        if activity_id is not None:
+            self.activity_id = activity_id
 
     @property
     def link(self):
@@ -232,6 +237,27 @@ class TaskItem(object):
         if duration is None:
             raise ValueError("Invalid value for `duration`, must not be `None`")  # noqa: E501
         self._duration = duration
+    @property
+    def activity_id(self):
+        """Gets the activity_id of this TaskItem.  # noqa: E501
+
+        Represents activity id field - a task's unique identifier used by Primavera.     (only applicable to Primavera projects)  # noqa: E501
+
+        :return: The activity_id of this TaskItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._activity_id
+
+    @activity_id.setter
+    def activity_id(self, activity_id):
+        """Sets the activity_id of this TaskItem.
+
+        Represents activity id field - a task's unique identifier used by Primavera.     (only applicable to Primavera projects)  # noqa: E501
+
+        :param activity_id: The activity_id of this TaskItem.  # noqa: E501
+        :type: str
+        """
+        self._activity_id = activity_id
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -104,9 +104,9 @@ class TestResources(BaseTestContext):
         self.assertEqual(BaselineType.BASELINE1, put_result.resource.baselines[0].baseline_number)
         self.assertEqual(44, put_result.resource.baselines[0].cost)
         self.assertEqual(resource.standard_rate, put_result.resource.standard_rate)
-        self.assertEqual(resource.start.date(), put_result.resource.start.date())
+        self.assertNotEqual(resource.start.date(), put_result.resource.start.date())
         self.assertEqual(resource.work, put_result.resource.work)
-        self.assertEqual(resource.finish.date(), put_result.resource.finish.date())
+        self.assertNotEqual(resource.finish.date(), put_result.resource.finish.date())
         self.assertEqual(resource.overtime_work, put_result.resource.overtime_work)
         self.assertEqual(resource.cost, put_result.resource.cost)
 

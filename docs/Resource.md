@@ -27,8 +27,8 @@ Name | Type | Description | Notes
 **over_allocated** | **bool** |  | 
 **available_from** | **datetime** | The first date when a resource is available. | 
 **available_to** | **datetime** | The last date when a resource is available. | 
-**start** | **datetime** | The scheduled start date of a resource. | 
-**finish** | **datetime** | The scheduled finish date of a resource. | 
+**start** | **datetime** | The scheduled start date of a resource. This property is calculated on demand and cannot be set directly. | 
+**finish** | **datetime** | The scheduled finish date of a resource. This property is calculated on demand and cannot be set directly. | 
 **can_level** | **bool** | Determines whether a resource can be leveled. | [default to True]
 **accrue_at** | [**CostAccrualType**](CostAccrualType.md) | Determines how cost is accrued against the resource. | 
 **work** | **str** | The total work assigned to a resource across all assigned tasks. | 

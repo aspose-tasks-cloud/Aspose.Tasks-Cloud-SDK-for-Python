@@ -963,7 +963,7 @@ class Resource(object):
     def start(self):
         """Gets the start of this Resource.  # noqa: E501
 
-        The scheduled start date of a resource.  # noqa: E501
+        The scheduled start date of a resource. This property is calculated on demand and cannot be set directly.  # noqa: E501
 
         :return: The start of this Resource.  # noqa: E501
         :rtype: datetime
@@ -974,7 +974,7 @@ class Resource(object):
     def start(self, start):
         """Sets the start of this Resource.
 
-        The scheduled start date of a resource.  # noqa: E501
+        The scheduled start date of a resource. This property is calculated on demand and cannot be set directly.  # noqa: E501
 
         :param start: The start of this Resource.  # noqa: E501
         :type: datetime
@@ -986,7 +986,7 @@ class Resource(object):
     def finish(self):
         """Gets the finish of this Resource.  # noqa: E501
 
-        The scheduled finish date of a resource.  # noqa: E501
+        The scheduled finish date of a resource. This property is calculated on demand and cannot be set directly.  # noqa: E501
 
         :return: The finish of this Resource.  # noqa: E501
         :rtype: datetime
@@ -997,7 +997,7 @@ class Resource(object):
     def finish(self, finish):
         """Sets the finish of this Resource.
 
-        The scheduled finish date of a resource.  # noqa: E501
+        The scheduled finish date of a resource. This property is calculated on demand and cannot be set directly.  # noqa: E501
 
         :param finish: The finish of this Resource.  # noqa: E501
         :type: datetime
